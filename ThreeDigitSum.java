@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ThreeDigitSum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+               int[] numbers = new int[10];
+        
+           System.out.println("Enter 10 elements:");
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+        
+               int sum = 0;
+        for (int num : numbers) {
+            if (num >= 100 && num <= 999) {
+                sum += num;
+            }
+        }
+        
+             System.out.println("The sum of all three-digit numbers is: " + sum);
+        
+        scanner.close();
+    }
+}
